@@ -22,7 +22,7 @@ function splitSentence(string = [], result) {
 // Desafio 4
 function concatName(array) {
   let test = array.length;
-  let string = (array[test -1] + ", " + array[0]);
+  let string = (array[test - 1] + ", " + array[0]);
   console.log(test);
 
   return string;
@@ -60,8 +60,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNum) {
+  let strings = [];
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 !== 0) {
+      strings[index] = 'fizz';
+    } else if (arrayNum[index] % 5 === 0 && arrayNum[index] % 3 !== 0) {
+      strings[index] = 'buzz';
+    } else if (arrayNum[index] % 3 === 0 && arrayNum[index]% 5 === 0) {
+      strings[index] = 'fizzBuzz';
+    } else {
+      strings[index] = 'bug!';
+    }
+  }
+  return strings;
 }
 
 // Desafio 9
