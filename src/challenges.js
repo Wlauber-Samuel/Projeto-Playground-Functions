@@ -67,7 +67,7 @@ function fizzBuzz(arrayNum) {
       strings[index] = 'fizz';
     } else if (arrayNum[index] % 5 === 0 && arrayNum[index] % 3 !== 0) {
       strings[index] = 'buzz';
-    } else if (arrayNum[index] % 3 === 0 && arrayNum[index]% 5 === 0) {
+    } else if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
       strings[index] = 'fizzBuzz';
     } else {
       strings[index] = 'bug!';
@@ -77,11 +77,23 @@ function fizzBuzz(arrayNum) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(messageEncode) {
+  // let messageEncode = 'hello';
+  // let split = messageEncode.split('');
+  // console.log(split);
+
+  return messageEncode.replaceAll('a', 1).replaceAll('e', 2).replaceAll('i', 3).replaceAll('o', 4).replaceAll('u', 5);
+
+  // .replace('e', '2').replace('i', '3').replace('o', '4').replace('u', '5');
+
+  // return split;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('hallo'));
+
+function decode(messageDecode) {
+
+  return messageDecode.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
+
 }
 
 // Desafio 10
